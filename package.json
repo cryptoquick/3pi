@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/express": "^4.16.0",
     "@types/node": "^10.3.1",
+    "ceylon": "^0.9.1",
     "express": "^4.16.3",
     "nedb-promises": "https://github.com/samdenty99/nedb-promises.git#a489c3faef9b290cb11b08bd4b2952f86926ddee",
     "web-request": "^1.0.7"
