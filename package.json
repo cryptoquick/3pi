@@ -7,9 +7,17 @@
   "author": "Hunter T <cryptoquick@gmail.com>",
   "scripts": {
     "start": "tsc && node lib/index.js",
-    "test": "tsc && ava"
+    "test": "tsc && concurrently -k \"node lib/index.js\" \"sleep 1 && CI=1 ava\""
   },
   "devDependencies": {
+    "@types/faker": "^4.1.2",
+    "@types/request": "^2.47.0",
+    "@types/request-promise": "^4.1.41",
+    "ava": "1.0.0-beta.5.1",
+    "concurrently": "^3.5.1",
+    "faker": "^4.1.0",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
     "typescript": "^2.9.1"
   },
   "dependencies": {
@@ -17,7 +25,6 @@
     "@types/node": "^10.3.1",
     "ceylon": "^0.9.1",
     "express": "^4.16.3",
-    "nedb-promises": "https://github.com/samdenty99/nedb-promises.git#a489c3faef9b290cb11b08bd4b2952f86926ddee",
-    "web-request": "^1.0.7"
+    "nedb-promises": "https://github.com/samdenty99/nedb-promises.git#a489c3faef9b290cb11b08bd4b2952f86926ddee"
   }
 }

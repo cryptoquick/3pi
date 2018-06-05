@@ -60,4 +60,21 @@ app.get('/api/doc/:_id', async (req, res) => {
   }
 })
 
+app.get('/api/doc', async (req, res) => {
+  try {
+    const results = await datastore.find({})
+
+    if (results) {
+      console.log(`Found ${results.length} results.`)
+      res.status(200).json(results)
+    } else {
+      console.warn('No results found for request.')
+      res.status(404).send()
+    }
+  } catch (err) {
+    console.error(err)
+    res.status(500).send()
+  }
+})
+
 app.listen(3000)
